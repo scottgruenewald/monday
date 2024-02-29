@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from setuptools import setup
+from setuptools import setup, find_packages
 
 from monday import __author__, __email__, __version__
 
@@ -13,7 +14,8 @@ setup(name='monday',
       long_description_content_type='text/markdown; charset=UTF-8',
       author=__author__,
       author_email=__email__,
-      packages=['monday', 'monday.resources', 'monday.graphqlclient', 'requests'],
+      # packages=['monday', 'monday.resources', 'monday.graphqlclient'],
+      packages = [find_packages],
       url='https://github.com/ProdPerfect/monday',
       include_package_data=True,
       zip_safe=False,
